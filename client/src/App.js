@@ -15,6 +15,8 @@ import Createprofile from './components/profile-form/Createprofile';
 import Editprofile from './components/profile-form/Editprofile';
 import Profiles from './components/profiles/Profiles';
 import Post from './components/Posts/Post-form';
+import upload from './components/Posts/upload';
+import alluploads from './components/dashboard/Uploads';
 
 //Redux
 import { Provider } from 'react-redux';
@@ -39,15 +41,17 @@ const App = () => {
         <Fragment>
           <Navbar />
           <Route exact path='/' component={Landing} />
+          <Route exact path='/' component={cards} />
+          <Route exact path='/' component={Aboutus} />
+
+          <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <section className='container'>
             <Alerts />
             <switch>
-              <Route exact path='/' component={cards} />
-
               <Route exact path='/register' component={Register} />
               <Route exact path='/Profiles' component={Profiles} />
               <Route exact path='/login' component={Login} />
-              <PrivateRoute exact path='/dashboard' component={Dashboard} />
+
               <PrivateRoute
                 exact
                 path='/Createprofile'
@@ -58,7 +62,7 @@ const App = () => {
                 path='/edit-profile'
                 component={Editprofile}
               />
-              <PrivateRoute exact path='/PostForm' component={Post} />
+              <PrivateRoute exact path='/upload' component={upload} />
             </switch>
           </section>
         </Fragment>

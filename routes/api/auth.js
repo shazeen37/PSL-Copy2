@@ -13,6 +13,7 @@ const { check, validationResult } = require('express-validator/check');
 //@route Get api/auths
 //desc Test route
 //@access Public
+
 router.get('/', auth, async (req, res) => {
   try {
     const user = await Users.findById(req.user.id).select('-password');
@@ -26,6 +27,7 @@ router.get('/', auth, async (req, res) => {
 //@route Post api/auth
 //desc Authentication of user & get token
 //@access Public
+
 router.post(
   '/',
   [

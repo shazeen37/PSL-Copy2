@@ -336,9 +336,7 @@ button {
 
 /* Landing Page */
 .landing {
-  position: relative;
-  background: url('./img/pencils.jpg') no-repeat center center/cover;
-  height: 100vh;
+  background: url('./img/landing.jpg') no-repeat center center/cover;
 }
 
 .landing-inner {
@@ -351,6 +349,27 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.about {
+  background: url('./img/school.jpg');
+  height: 50vh;
+  margin-top: 80px;
+}
+
+.about-inner {
+  color: white;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.overlay {
+  background-color: rgba(3, 219, 223, 0.424); /*dim the background*/
 }
 
 /* Profiles Page */
@@ -578,22 +597,236 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
-  .about-us {
-    margin-top: 50px;
-    position: relative;
+}
 
-    height: 50vh;
-  }
+.dashboard {
+  display: block;
+  margin-top: 0px;
+  margin-left: 0px;
+}
 
-  .about-inner {
-    color: rgb(255, 255, 255);
-    height: 100%;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+.profile-header {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  height: 190px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+  background: url('./img/landing.jpg');
+}
+
+.profile-img {
+  float: left;
+  width: 340px;
+  height: 200px;
+}
+.profile-img img:hover {
+  transform: scale(1.1) !important;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  border: 4px solid #ffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  z-index: 5;
+  background: #fff;
+}
+
+.profile-nav-info {
+  float: left;
+  flex-direction: coloumn;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.profile-nav-info h3 {
+  font-variant: small-caps;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.profile-nav-info .address {
+  display: flex;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.profile-nav-info .address p {
+  margin-right: 5px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.profile-option {
+  width: 40px;
+  height: 40px;
+  background: #f1356d;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+}
+.profile-option .notification i {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.profile-option:hover {
+  background: #fff;
+  border: 1px solid #f1356d;
+}
+
+.profile-option:hover .notification i {
+  color: #f1356d;
+}
+.profile-option .notification .alert-message {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #fff;
+  color: #f1356d;
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.main-bd {
+  width: 100%;
+  display: flex;
+  padding-right: 15px;
+  float: right;
+}
+.profile-side {
+  width: 300px;
+  background: #fff;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 90px 30px 20px;
+  font-family: 'Bree serif', serif;
+  margin-left: 10px;
+  z-index: 99;
+}
+.profile-side p {
+  margin-bottom: 7px;
+  color: #333;
+  font-size: 14px;
+}
+.profile-side p i {
+  color: #07ecf0bb;
+  margin-right: 20px;
+  size: 30px;
+  font-size: 20px;
+}
+.profile-side:hover p i {
+  color: #07ecf0bb;
+  margin-right: 20px;
+  size: 30px;
+}
+
+.profile-btn {
+  display: flex;
+  outline: none;
+  margin: 10px;
+}
+.chatbtn,
+.createbtn {
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+  background: #07ecf0bb;
+  font-family: 'Bree Serif', sans-serif;
+  font-size: 1rem;
+  margin: 5px 2px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 10px;
+  transition: #07ecf0bb 0.3s ease-in-out;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  outline: none;
+  margin: 10px;
+  margin-top: 5px;
+}
+button.chatbtn:hover,
+button.createbtn:hover {
+  background: #fff;
+  border: #07ecf0bb;
+  color: #07ecf0bb;
+}
+button.chatbtn i,
+button.createbtn i {
+  margin-right: 5px;
+  color: #fff;
+  size: 50px;
+}
+button.chatbtn:hover i,
+button.createbtn:hover i {
+  margin-right: 5px;
+  color: #07ecf0bb;
+}
+.left-side {
+  float: left;
+}
+.right-side {
+  float: right;
+}
+.navi {
+  width: 100%;
+  z-index: -1;
+}
+.navi ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.navi ul li {
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.navi ul li.active,
+.navi ul li:hover {
+  box-shadow: 0px -3px 0px #07ecf0bb inset;
+}
+
+.profile-body {
+  width: 100%;
+  z-index: -1;
+}
+
+.tab {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.tabcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }

@@ -15,3 +15,5 @@ export const CLEAR_PROFILE = 'CLEAR_PROFILE';
 export const GET_POSTS = 'GET_POSTS';
 export const POST_ERROR = 'POST_ERROR';
 export const ADD_POST = 'ADD_POST';
+export const GET_UPLOADS = 'GET_UPLOADS';
+export const UPLOADS_ERROR = 'UPLOADS_ERROR';

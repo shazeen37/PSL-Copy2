@@ -1,50 +1,57 @@
 import React, { Component } from 'react';
+import ReactCardCarousel from 'react-card-carousel';
 import Card from './CardsUI';
 import './card-style.css';
+import { Container } from 'reactstrap';
 
-class Cards extends Component {
+class MyCarousel extends Component {
+  static get CONTAINER_STYLE() {
+    return {
+      position: 'relative',
+      height: '50vh',
+      width: '100%',
+      display: 'flex',
+      flex: 1,
+      paddingTop: '10px',
+      justifyContent: 'center',
+      alignItems: 'middle',
+    };
+  }
+
   render() {
     return (
-      <section>
-        <div className='containier-fluid d-flex justify-content-center'>
-          <div className='col'>
-            <div className='row'>
-              <div className='col-md-4'>
-                {' '}
-                <Card />
-              </div>
-              <div className='col-md-4'>
-                <Card />
-              </div>
-              <div className='col-md-4'>
-                <Card />
-              </div>
+      <Container>
+        <div style={MyCarousel.CONTAINER_STYLE}>
+          <ReactCardCarousel
+            autoplay={true}
+            autoplay_speed={2500}
+            className='card-img-top'
+          >
+            <div>
+              <Card />
             </div>
-          </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+            <div>
+              <Card />
+            </div>
+          </ReactCardCarousel>
         </div>
-        <div className='col'>
-          <div className='row'>
-            <div className='col-md-4'>
-              {' '}
-              <Card />
-            </div>
-            <div className='col-md-4'>
-              <Card />
-            </div>
-            <div className='col-md-4'>
-              <Card />
-            </div>
-          </div>
-        </div>
-
         <div className='containier-fluid d-flex justify-content-center'>
           <a herf='#' className='btn btn-Success'>
             Search
           </a>
         </div>
-      </section>
+      </Container>
     );
   }
 }
 
-export default Cards;
+export default MyCarousel;

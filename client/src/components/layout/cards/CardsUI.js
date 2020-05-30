@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './card-style.css';
-//import CardDeck from 'react-bootstrap/CardDeck';
-//import Card from 'react-bootstrap/Card';
-
+import ReactPlayer from 'react-player';
 import img1 from '../../../img/vector-video-player-941434_1280.png';
 
 const Card = () => {
   return (
-    <div className='card text-center shadow'>
+    <div className='cardVideo text-center shadow'>
       <div className='overflow'>
-        <img src={img1} alt='image 1/' className='card-img-top' />
+        <ReactPlayer
+          url='../../../../../public/4b114fd3-e117-418b-a792-3b859e3fff60-hand_close7.mp4'
+          playing
+          loop
+        />
       </div>
-      <div className='card-body text dark'>
-        <h4 className='card-tital'> Video Tital </h4>
+      <div className='cardVideo-body text dark'>
+        <h4 className='cardVideo-tital'> Hand Gesture </h4>
 
         <a herf='#' className='btn btn-outline-success'>
           {' '}
